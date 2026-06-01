@@ -3,31 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <title>Nadia's Weather App</title>
-    <link href="stylesheet.css" src="src/style.css" />
   </head>
-  <body>
-    <h1>Nadia's Weather App</h1>
+  <body class="roboto-slab-font">
+    <h1 class="merriweather-font">Nadia's Weather App</h1>
     <div class="container">
       <header>
         <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="search" />
+        <input class="search-input" type="search" placeholder="Enter a city name..." required />
+          <input class="search-button" type="submit" value="Search" />
         </form>
       </header>
       <main>
+        <h2>La Herradura</h2>
         <p>
-            <div></div>
-            Monday, 13:23, scattered clouds <br/>
-            Humidity: 49%, Wind: 3.6 km/h
+            <div class="weather-info">
+             <span >Monday </span><span>13:23</span>, <span>scattered clouds</span>
+             <div>Humidity: <span id="humidity-value">49%</span>, Wind: <span id="windspeed-value">3.6 km/h</span>
             </div>
-            <div>
-                🌞 23 °C
+            </div>
+            <div class="temperature" >
+                <span id="temperature-icon">⛅</span> <span id="temperature">23</span><span class="degrees">°C</span>
             </div>
             <div>
                 <ul>
-                    Mon  Tue  Wed  Thu  Fri  Sat  Sun <br/>
-                    23°  25°  22°  24°  26°  27°  28°
+                    <li>Mon <div>23°</div></li>
+                    <li>Tue <div>25°</div></li>
+                    <li>Wed <div>22°</div></li>
+                    <li>Thu <div>24°</div></li>
+                    <li>Fri <div>26°</div></li>
+                    <li>Sat <div>27°</div></li>
+                    <li>Sun <div>28°</div></li>
                 </ul>
             </div>
         </p>
