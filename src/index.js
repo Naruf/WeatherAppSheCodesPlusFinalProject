@@ -3,19 +3,19 @@ function updateWheatherInfo(response) {
   let newTemperature = Math.round(response.data.temperature.current);
   let updatedCity = document.querySelector("h2");
   let apiCity = response.data.city;
-  updatedCity.innerHTML = apiCity;
-  temperature.innerHTML = newTemperature;
   let description = document.querySelector("#weather-description");
   let newDescription = response.data.condition.description;
-  description.innerHTML = newDescription;
   let humidity = document.querySelector("#humidity-value");
   let newHumidity = response.data.temperature.humidity;
-  humidity.innerHTML = `${newHumidity} %`;
   let windSpeed = document.querySelector("#windspeed-value");
   let newWindSpeed = response.data.wind.speed;
-  windSpeed.innerHTML = `${newWindSpeed} km/h`;
   let icon = document.querySelector("#temperature-icon");
   let newIcon = response.data.condition.icon_url;
+  updatedCity.innerHTML = apiCity;
+  temperature.innerHTML = newTemperature;
+  description.innerHTML = newDescription;
+  humidity.innerHTML = `${newHumidity} %`;
+  windSpeed.innerHTML = `${newWindSpeed} km/h`;
   icon.innerHTML = `<img src=${newIcon} width= 150 height= 150>`;
 }
 
@@ -47,3 +47,24 @@ let citySearchInput = document.querySelector("form");
 citySearchInput.addEventListener("submit", cityInputValue);
 
 apiCitySearch("almuñécar");
+
+let now = new Date();
+let currentWeekday = now.getDay();
+let day = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let weekday = day[currentWeekday];
+let dayElement = document.querySelector("#current-day");
+let hours = String(now.getHours()).padStart(2, "0");
+let hourElement = document.querySelector("#current-hour");
+let minutes = String(now.getMinutes()).padStart(2, "0");
+let minutesElement = document.querySelector("#current-minutes");
+dayElement.innerHTML = weekday;
+hourElement.innerHTML = hours;
+minutesElement.innerHTML = minutes;

@@ -3,7 +3,6 @@ a {
 }
 body {
   /* background-color: #daf3f3; */
-  min-height: 100vh;
   background-attachment: fixed; /* optional: keeps it still on scroll */
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,17 +11,18 @@ body {
     rgba(255, 255, 255, 0.31) 1.2%,
     rgb(36, 212, 219) 100.2%
   );
+  min-height: 100vh;
 }
 h1 {
-  text-align: center;
-  font-size: 40px;
-  padding: 20px;
   font-weight: 900;
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
 }
 h2 {
   font-size: 40px;
-  padding: -10px 5px 0px 0px;
   margin-left: 5px;
+  padding: -10px 5px 0px 0px;
 }
 header {
   border-bottom: 1px solid rgba(216, 247, 248, 0.7);
@@ -31,15 +31,14 @@ header {
 
 footer {
   border-top: 1px solid rgba(216, 247, 248, 0.7);
-  font-family: "Merriweather", serif;
   color: rgb(11, 11, 11);
-  padding: 25px 10px 10px 10px;
+  font-family: "Merriweather", serif;
   font-size: 13px;
   font-weight: 500;
+  padding: 25px 10px 10px 10px;
   text-align: center;
 }
 main {
-  /* padding-top : -20px; */
   margin-top: -10px;
 }
 ul {
@@ -51,24 +50,19 @@ ul {
   padding-right: 40px;
 }
 .container {
+  background-color: white;
   border: 1px solid transparent;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 6px 6px 15px rgba(9, 9, 9, 0.3);
-  background-color: white;
-  /* background: radial-gradient(
-    401px at 50.6% -0.3%,
-    rgba(255, 255, 255, 0.31) 1.2%,
-    rgb(36, 212, 219) 100.2%
-  ); */
   max-width: 650px;
   max-height: 400px;
   min-width: 500px;
   margin: auto;
+  padding: 20px;
 }
 .degrees {
-  font-size: 30px;
   color: black;
+  font-size: 30px;
   position: relative;
   top: -80px;
 }
@@ -101,13 +95,13 @@ ul {
   width: 490px;
 }
 .search-button {
-  padding: 15px 25px;
   border: 1px solid transparent;
   border-radius: 5px;
   background-color: rgb(14, 161, 190);
   color: white;
   cursor: pointer;
   font-size: 20px;
+  padding: 15px 25px;
 }
 .weather-info {
   font-size: 17px;
@@ -118,10 +112,10 @@ ul {
 .temperature {
   color: rgb(14, 161, 190);
   font-size: 50px;
+  font-weight: 600;
   left: 340px;
   position: relative;
   top: -140px;
-  font-weight: 600;
 }
 #humidity-value,
 #windspeed-value {
@@ -129,16 +123,16 @@ ul {
   font-weight: 700;
 }
 #temperature {
-  font-size: 110px;
-  color: black;
-  position: relative;
   bottom: 30px;
+  color: black;
+  font-size: 110px;
+  position: relative;
 }
 #temperature-icon {
   font-size: 80px;
-  padding: 0px;
+  left: 10px;
   margin: 0px;
+  padding: 0px;
   position: relative;
   top: 10px;
-  left: 10px;
 }
