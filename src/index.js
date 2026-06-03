@@ -1,23 +1,29 @@
 function weatherForecast(response) {
-  console.log(response.data.daily);
-  let forecastDay = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastTemplate = "";
 
-  forecastDay.forEach(function (day) {
-    forecastTemplate =
-      forecastTemplate +
-      `<div class ="weather-forecast-date">
-    <div class="weather-forecast-day">${day}</div> 
-    <div  class="weather-forecast-icon">☀️</div> 
-    <div class="weather-forecast-temperature">
-    <div class="weather-forecast-max-temp" id="forecast-max-temp"><strong>23°</strong></div>
-    <div class="weather-forecast-min-temp">10°</div>
-    </div>
-    </div>`;
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastTemplate =
+        forecastTemplate +
+        `<div class ="weather-forecast-date">
+      <div class="weather-forecast-day">${displayDay(day.time)}</div> 
+      <div ><img src="${day.condition.icon_url}"/ class="weather-forecast-icon"> </div> 
+      <div class="weather-forecast-temperature">
+      <div class="weather-forecast-max-temp" id="forecast-max-temp"><strong>${Math.round(day.temperature.maximum)}°</strong></div>
+      <div class="weather-forecast-min-temp">${Math.round(day.temperature.minimum)}°</div>
+      </div>
+      </div>`;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastTemplate;
+}
+function displayDay(timestamp) {
+  let forecastDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  return forecastDay[day];
 }
 
 function fetchForecastData(city) {
@@ -46,7 +52,7 @@ function updateWheatherInfo(response) {
   windSpeed.innerHTML = `${newWindSpeed} km/h`;
   icon.innerHTML = `<img src=${newIcon} width= 150 height= 150>`;
 
-  fetchForecastData(response.data.city);
+  fetchForecastData(apiCity);
 }
 
 function validateCity(response) {
