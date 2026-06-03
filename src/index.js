@@ -19,6 +19,7 @@ function weatherForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastTemplate;
 }
+
 function displayDay(timestamp) {
   let forecastDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let date = new Date(timestamp * 1000);
@@ -61,7 +62,7 @@ function validateCity(response) {
     updateWheatherInfo(response);
   } else {
     alert(
-      "                                            Ooops!\n                              That was no a valid city\n                                         Try again 😉",
+      "                                            Ooops!\n                              That was not a valid city\n                                         Try again 😉",
     );
   }
 }

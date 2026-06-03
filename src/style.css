@@ -47,7 +47,7 @@ main {
 }
 
 .container {
-  background-color: white;
+  background-color: rgb(233, 233, 224);
   border: 1px solid transparent;
   border-radius: 10px;
   box-shadow: 6px 6px 15px rgba(9, 9, 9, 0.3);
@@ -56,6 +56,7 @@ main {
   max-height: 600px;
   min-width: 650px;
   margin: 0 auto;
+  margin-top: 50px;
   padding: 20px 25px;
 }
 
@@ -89,7 +90,7 @@ main {
 }
 
 .search-input {
-  background-color: rgb(216, 247, 248);
+  background-color: rgb(244, 251, 252);
   border: 1px solid transparent;
   border-radius: 5px;
   font-size: 20px;
@@ -126,14 +127,14 @@ main {
   font-weight: 400;
   color: rgb(86, 86, 86);
   padding-bottom: 8px;
-  margin-right: 15px;
+  margin-right: 10px;
   text-align: center;
 }
 
 .weather-forecast-icon {
   padding-bottom: 8px;
   text-align: center;
-  width: 80px;
+  width: 85px;
 }
 
 .weather-forecast-temperature {
@@ -144,9 +145,12 @@ main {
   padding: 0 0 20px 0;
   text-align: center;
 }
-.weather-forecast-max-temp,
+.weather-forecast-max-temp {
+  padding: 0 10px;
+}
 .weather-forecast-min-temp {
   padding: 0 10px;
+  color: rgb(14, 161, 190);
 }
 
 .temperature-section {
