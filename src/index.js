@@ -68,3 +68,26 @@ let minutesElement = document.querySelector("#current-minutes");
 dayElement.innerHTML = weekday;
 hourElement.innerHTML = hours;
 minutesElement.innerHTML = minutes;
+
+function weatherForecast() {
+  let forecastDay = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastTemplate = "";
+
+  forecastDay.forEach(function (day) {
+    forecastTemplate =
+      forecastTemplate +
+      `<div class ="weather-forecast-date">
+                  <div class="weather-forecast-day">${day}</div> 
+                  <div  class="weather-forecast-icon">☀️</div> 
+                  <div class="weather-forecast-temperature">
+                    <div class="weather-forecast-max-temp"><strong>23°</strong></div>
+                    <div class="weather-forecast-min-temp">10°</div>
+                  </div>
+                  </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastTemplate;
+}
+
+weatherForecast();
