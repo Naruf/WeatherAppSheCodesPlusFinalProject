@@ -1,8 +1,8 @@
 a {
   color: rgb(14, 161, 190);
 }
+
 body {
-  /* background-color: #daf3f3; */
   background-attachment: fixed; /* optional: keeps it still on scroll */
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,17 +13,20 @@ body {
   );
   min-height: 100vh;
 }
+
 h1 {
   font-weight: 900;
   font-size: 50px;
   padding: 20px;
   text-align: center;
 }
+
 h2 {
   font-size: 40px;
   margin-left: 5px;
   padding: -10px 5px 0px 0px;
 }
+
 header {
   border-bottom: 1px solid rgba(216, 247, 248, 0.7);
   padding: 10px 10px 25px 5px;
@@ -38,34 +41,31 @@ footer {
   padding: 25px 10px 10px 10px;
   text-align: center;
 }
+
 main {
   margin-top: -10px;
 }
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style: none;
-  margin: -130px 10px 20px 10px;
-  padding-right: 40px;
-}
+
 .container {
   background-color: white;
   border: 1px solid transparent;
   border-radius: 10px;
   box-shadow: 6px 6px 15px rgba(9, 9, 9, 0.3);
+  display: block;
   max-width: 650px;
-  max-height: 400px;
-  min-width: 500px;
-  margin: auto;
+  max-height: 600px;
+  min-width: 650px;
+  margin: 0 auto;
   padding: 20px;
 }
+
 .degrees {
   color: black;
   font-size: 30px;
   position: relative;
   top: -80px;
 }
+
 .merriweather-font {
   font-family: "Merriweather", serif;
   font-optical-sizing: auto;
@@ -73,18 +73,21 @@ ul {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
 .roboto-mono-font {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
 .roboto-slab-font {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
 .search-input {
   background-color: rgb(216, 247, 248);
   border: 1px solid transparent;
@@ -94,6 +97,7 @@ ul {
   padding: 15px;
   width: 490px;
 }
+
 .search-button {
   border: 1px solid transparent;
   border-radius: 5px;
@@ -103,13 +107,47 @@ ul {
   font-size: 20px;
   padding: 15px 25px;
 }
-.weather-info {
-  font-size: 17px;
+
+.weather-info-section {
+  font-size: 18px;
   color: rgba(0, 0, 0, 0.7);
   margin-top: -10px;
   margin-left: 5px;
 }
-.temperature {
+.weather-forecast-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -140px;
+  margin-right: 10px;
+}
+
+.weather-forecast-day {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(86, 86, 86);
+  padding-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(233, 48, 48);
+  margin-bottom: 10px;
+  display: flex;
+}
+.weather-forecast-max-temp,
+.weather-forecast-min-temp {
+  padding: 5px;
+}
+
+.temperature-section {
   color: rgb(14, 161, 190);
   font-size: 50px;
   font-weight: 600;
@@ -117,17 +155,20 @@ ul {
   position: relative;
   top: -140px;
 }
+
 #humidity-value,
 #windspeed-value {
   color: rgb(190, 14, 14);
   font-weight: 700;
 }
+
 #temperature {
   bottom: 30px;
   color: black;
   font-size: 110px;
   position: relative;
 }
+
 #temperature-icon {
   font-size: 80px;
   left: 10px;
